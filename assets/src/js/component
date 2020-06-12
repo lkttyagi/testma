@@ -1,0 +1,67 @@
+import  React, {Component} from 'react';
+import './sidenav.css';
+import { NavLink } from 'react-router-dom';
+
+class Sidenav extends Component{
+	render(){
+
+               $(document).ready(function(){
+                        $('.sidenav').sidenav();
+               });
+
+		return(
+
+<aside className="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square">
+      <div className="brand-sidebar">
+        <h1 className="logo-wrapper"><a className="brand-logo darken-1" href="/"><img style={{width: '70%', height: 'auto' }} src="../assets/images/logo/drishte-i.png" alt="materialize logo" /></a></h1>
+      </div>
+
+      <ul className="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="menu-accordion">
+        <li className="bold"><NavLink className="waves-effect waves-cyan" to="./dashboard"><i className="material-icons">settings_input_svideo</i><span className="menu-title" data-i18n="">Dashboard</span></NavLink>
+   
+        </li>
+
+
+        <li className="navigation-header"><a className="navigation-header-text">Drishte -i </a><i className="navigation-header-icon material-icons">more_horiz</i>
+        </li>
+       
+        <li className="bold"><NavLink className="waves-effect waves-cyan" to="/launch"><i className="material-icons">launch</i><span className="menu-title" data-i18n="">Launch</span></NavLink>
+        </li>
+        <li className="bold"><NavLink className="waves-effect waves-cyan" to="/campaigns"><i className="material-icons">web</i><span className="menu-title" data-i18n="">Campaigns</span></NavLink>
+        </li>
+        <li className="bold"><NavLink className="waves-effect waves-cyan" to="/screens"><i className="material-icons">video_label</i><span className="menu-title" data-i18n="">Screens</span></NavLink>
+        </li>
+        
+        <li className="navigation-header"><a className="navigation-header-text">User </a><i className="navigation-header-icon material-icons">more_horiz</i>
+        </li>
+        <li className="bold"><NavLink to="/drafted" className="waves-effect waves-cyan" to="/drafted"><i className="material-icons">drafts</i><span className="menu-title" data-i18n="">Drafted Campaigns</span></NavLink>
+        </li>
+        <li className="bold"><NavLink className="waves-effect waves-cyan" to="/profile"><i className="material-icons">account_circle</i><span className="menu-title" data-i18n="">Profile</span></NavLink>
+        </li>
+        <li className="bold"><NavLink className="waves-effect waves-cyan" to="/audience"><i className="material-icons">supervised_user_circle</i><span className="menu-title" data-i18n="">Audience Profiles</span></NavLink>
+        </li>
+        <li className="bold"><NavLink className="waves-effect waves-cyan" to="/brands"><i className="material-icons">branding_watermark</i><span className="menu-title" data-i18n="">Brands</span></NavLink>
+        </li>
+
+        <li className="navigation-header"><a className="navigation-header-text">Support </a><i className="navigation-header-icon material-icons">more_horiz</i>
+        </li>
+        <li className="bold"><NavLink className="waves-effect waves-cyan" to="/help"><i className="material-icons">live_help</i><span className="menu-title" data-i18n="">Help</span></NavLink>
+        </li>
+       
+       
+
+
+
+    
+        
+        
+        
+      
+      </ul>
+      <div className="navigation-background"></div><a className="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only" href="#" data-target="slide-out"><i className="material-icons">menu</i></a>
+
+</aside>
+			);
+	}
+}
+export default Sidenav;
